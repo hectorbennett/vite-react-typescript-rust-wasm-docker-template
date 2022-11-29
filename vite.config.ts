@@ -3,8 +3,9 @@ import wasmPack from "vite-plugin-wasm-pack";
 import react from "@vitejs/plugin-react";
 
 export default defineConfig({
-  build: {
-    minify: false,
+  server: {
+    host: "0.0.0.0",
+    port: 3000,
   },
   plugins: [wasmPack(["./wasm"]), react()],
 });

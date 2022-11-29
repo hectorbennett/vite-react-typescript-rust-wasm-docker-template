@@ -6,6 +6,7 @@
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "serve": "^14.1.2",
     "wasm-pack": "^0.10.3"
   },
   "devDependencies": {
@@ -18,8 +19,9 @@
   },
   "scripts": {
     "wasm": "wasm-pack build ./wasm --target web",
-    "dev": "npm run wasm && vite",
+    "dev": "npm run wasm && vite --host",
     "build": "npm run wasm && tsc && vite build",
-    "preview": "view preview"
+    "preview": "view preview",
+    "serve": "serve -s dist -p 3000"
   }
 }

@@ -1,5 +1,4 @@
 FROM node:18.12.1
-# FROM rust:1.31
 
 # Install rust
 # Get Rust; NOTE: using sh for better compatibility with other base images
@@ -11,13 +10,15 @@ ENV PATH="/root/.cargo/bin:${PATH}"
 # Check cargo is visible
 RUN cargo --help
 
-WORKDIR /usr/src/app
+WORKDIR /app
 COPY package*.json ./
 
 RUN npm install -g wasm-pack
-RUN npm install
+RUN npm ci
 
 COPY . .
 
 ENV NODE_ENV=production
+EXPOSE 3000
 RUN npm run build
+CMD ["npm", "run", "serve"]
