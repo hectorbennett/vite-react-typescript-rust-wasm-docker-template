@@ -1,4 +1,4 @@
-# rust-wasm-react-base
+# Vite + React + TypeScript + Rust/WebAssembly
 A minimal docker project for running a vite application on DigitalOcean with React, TypeScript and Rust/WebAssembly/Wasm all working out of the box. 
 
 See an example in action at
