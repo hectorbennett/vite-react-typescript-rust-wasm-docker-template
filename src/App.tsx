@@ -25,7 +25,7 @@ function App() {
           onClick={() => {
             init().then(() => {
               console.log("init wasm-pack");
-              greet("from vite!");
+              greet();
             });
           }}
         >
