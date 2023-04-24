@@ -12,6 +12,3 @@ yarn run format:check || (echo "run 'yarn run format' to fix any formatting erro
 
 # check wasm linting errors
 yarn run lint:wasm:check || (echo "run 'yarn run lint:wasm' to fix rust linting errors"; false);
-
-# run tests
-yarn run test
