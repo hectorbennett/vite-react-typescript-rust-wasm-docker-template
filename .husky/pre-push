@@ -1,6 +1,9 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
+# build
+yarn run build
+
 # check typescript errors
 yarn run type:check
 
