@@ -10,5 +10,5 @@ extern "C" {
 
 #[wasm_bindgen]
 pub fn greet() {
-    alert(&format!("Hello from rust!"));
+    alert("Hello from rust!");
 }
