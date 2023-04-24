@@ -44,7 +44,6 @@
     "build": "yarn run build:wasm && yarn run build:js",
     "preview": "view preview",
     "serve": "serve -s dist -p 3000",
-    "bench:wasm": "cd ./wasm && cargo bench",
     "type:check": "tsc",
     "lint:js:check": "eslint . --config ./.eslintrc.json",
     "lint:js": "eslint --fix . --config ./.eslintrc.json",
@@ -52,8 +51,6 @@
     "lint:wasm": "cd wasm && cargo clippy --fix",
     "format:check": "prettier --check . --config ./.prettierrc.json",
     "format": "prettier --write . --config ./.prettierrc.json",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build",
     "check": "yarn run type:check && yarn run lint:js:check && yarn run format:check && yarn run lint:wasm:check"
   }
 }
